@@ -1,0 +1,32 @@
+function App(){
+    const taskss= [
+{ name: 'Task 1', status: 'In progress', isEditing: false },
+{name: 'Task 2', status: 'Done', isEditing: false },
+{name: 'Task3', status: 'In progress', inEditing: true },
+    ];
+    return(
+        <>
+        <div id="app_island">
+            <h1>TODO LIST</h1>
+            <div class="division">
+                <Button text="search" type="darkButton"/>
+                <Button text="New task" type="brightButton"/>
+            </div>
+            <div class="division">
+                <input type="text" piaceholder="search for tasks..."/>
+                <Button text="Go" type="brightButton"/>
+            </div>
+            <div class="division">
+                <span>Filters:   </span>
+                <Button text="Done" type="darkButton"/>
+                <Button text="in progress" type="darkButton"/>
+                <Button text="All" type="darkButton"/>
+            </div>
+            <TaskList tasks={taskss}/>
+            </div>
+            </>
+
+
+            
+    )
+}
